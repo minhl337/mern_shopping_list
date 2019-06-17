@@ -34,4 +34,15 @@ router.delete('/:id', auth, (req, res) => {
     .catch(err => res.status(404).json({ success: false }));
 });
 
+router.patch("/:id", (req, res) => {
+  Item.findOneAndUpdate(
+    { _id: req.params.id },
+    { $set: { name: req.body.name } },
+    { new: true },
+    function(err, documents) {
+      res.send({ error: err, affected: documents });
+    }
+  );
+});
+
 module.exports = router;
