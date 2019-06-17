@@ -8,7 +8,8 @@ import {
   NavItem,
   NavLink,
   Container
-} from 'reactstrap';
+}
+from 'reactstrap';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import RegisterModal from './auth/RegisterModal';
@@ -61,7 +62,7 @@ class AppNavbar extends Component {
       <div>
         <Navbar color='dark' dark expand='sm' className='mb-5'>
           <Container>
-            <NavbarBrand href='/'>ShoppingList</NavbarBrand>
+            <NavbarBrand href='/'>MERNstagram</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className='ml-auto' navbar>
